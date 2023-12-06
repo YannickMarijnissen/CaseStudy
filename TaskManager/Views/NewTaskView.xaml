@@ -1,0 +1,71 @@
+﻿<Window x:Class="wpf.Views.NewTaskView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf.Views"
+        mc:Ignorable="d"
+        Title="New task" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Title"
+               Grid.Row="0" Grid.Column="0"
+               Margin="5"
+               VerticalAlignment="Center"
+               FontSize="14" />
+
+        <TextBox Text="{Binding Name,ValidatesOnDataErrors=True}"
+                 Grid.Row="0" Grid.Column="1"
+                 Margin="5"
+                 VerticalContentAlignment="Center"
+                 FontSize="14" />
+        <Label Content="Description"
+               Grid.Row="1" Grid.Column="0"
+               Margin="5"
+               VerticalAlignment="Center"
+               FontSize="14" />
+
+        <TextBox Text="{Binding Description,ValidatesOnDataErrors=True}"
+                 Grid.Row="1" Grid.Column="1"
+                 Margin="5"
+                 VerticalContentAlignment="Center"
+                 FontSize="14" />
+        <Label Content="Deadline"
+       Grid.Row="2" Grid.Column="0"
+       Margin="5"
+       VerticalAlignment="Center"
+       FontSize="14" />
+
+        <TextBox Text="{Binding Task.Deadline, ValidatesOnDataErrors=True}"
+         Grid.Row="2" Grid.Column="1"
+         Margin="5"
+         VerticalContentAlignment="Center"
+         FontSize="14" />
+        <Button x:Name="btnAddTask" Content="Task toevoegen" Grid.Column="0" Grid.Row="3" Margin="5"
+                Command="{Binding}" CommandParameter="TaskToevoegen" />
+
+
+
+    </Grid>
+
+</Window>

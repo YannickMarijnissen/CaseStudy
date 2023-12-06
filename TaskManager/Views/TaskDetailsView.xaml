@@ -1,0 +1,48 @@
+﻿<Window x:Class="wpf.Views.TaskDetailsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf.Views"
+        mc:Ignorable="d"
+        Title="TaskDetailsView" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+             <RowDefinition Height="Auto" />
+            <!-- Add more rows if needed -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            
+            <!-- Add more columns if needed -->
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Task Details" FontWeight="Bold" FontSize="18" Margin="0,0,0,10" />
+
+        <TextBlock Text="Title:" Grid.Row="1" Grid.Column="0" Margin="0,5,5,0" VerticalAlignment="Center" />
+        <TextBlock Text="{Binding Task.Name}" Grid.Row="1" Grid.Column="1" Margin="0,5,5,0" VerticalAlignment="Center" />
+
+        <TextBlock Text="Description:" Grid.Row="2" Grid.Column="0" Margin="0,5,5,0" VerticalAlignment="Center" />
+        <TextBlock Text="{Binding Task.Description}" Grid.Row="2" Grid.Column="1" Margin="0,5,5,0" VerticalAlignment="Center" />
+
+        <TextBlock Text="State:" Grid.Row="3" Grid.Column="0" Margin="0,5,5,0" VerticalAlignment="Center" />
+        <TextBlock Text="{Binding Task.State}" Grid.Row="3" Grid.Column="1" Margin="0,5,5,0" VerticalAlignment="Center" />
+
+        <TextBlock Text="Created At:" Grid.Row="4" Grid.Column="0" Margin="0,5,5,0" VerticalAlignment="Center" />
+        <TextBlock Text="{Binding Task.CreatedAt, StringFormat='yyyy-MM-dd HH:mm:ss'}" Grid.Row="4" Grid.Column="1" Margin="0,5,5,0" VerticalAlignment="Center" />
+
+        <TextBlock Text="Deadline:" Grid.Row="5" Grid.Column="0" Margin="0,5,5,0" VerticalAlignment="Center" />
+        <TextBlock Text="{Binding Task.Deadline}" Grid.Row="5" Grid.Column="1" Margin="0,5,5,0" VerticalAlignment="Center" />
+        <!-- Add more details as needed -->
+
+        <Button Content="Back to Overview" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,10,0,0"
+                Command="{Binding}" CommandParameter="BackToOverview" />
+    </Grid>
+</Window>
