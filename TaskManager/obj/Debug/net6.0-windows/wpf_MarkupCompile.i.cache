@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\TaskManager\App.xaml
-6-2127194474
+62073688818
 
-1132989525
+17168067955
 197971051213
-Views\CalendarView.xaml;Views\EditTaskView.xaml;Views\NewTaskView.xaml;Views\StatisticsView.xaml;Views\TaskDetailsView.xaml;Views\TaskOverviewView.xaml;
+Views\CalendarView.xaml;Views\EditTaskView.xaml;Views\LoginView.xaml;Views\NewTaskView.xaml;Views\TaskDetailsView.xaml;Views\TaskOverviewView.xaml;
 
-True
+False
 

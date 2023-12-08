@@ -32,3 +32,5 @@ C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\TaskManager\obj\De
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\TaskManager\obj\Debug\net6.0-windows\Views\TaskDetailsView.baml
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\TaskManager\obj\Debug\net6.0-windows\Views\CalendarView.g.cs
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\TaskManager\obj\Debug\net6.0-windows\Views\CalendarView.baml
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\TaskManager\obj\Debug\net6.0-windows\Views\LoginView.baml
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\TaskManager\obj\Debug\net6.0-windows\Views\LoginView.g.cs

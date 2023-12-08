@@ -17,8 +17,8 @@ namespace wpf
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            var vm = new TaskOverviewViewmodel();
-            var view = new CalendarView();
+            var vm = new LoginViewmodel();
+            var view = new LoginView();
             view.DataContext = vm;
             view.Show();
         }

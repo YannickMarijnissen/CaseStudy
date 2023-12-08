@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace wpf.Views
 {
     /// <summary>
-    /// Interaction logic for StatisticsView.xaml
+    /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class StatisticsView : Window
+    public partial class LoginView : Window
     {
-        public StatisticsView()
+        public LoginView()
         {
             InitializeComponent();
         }
