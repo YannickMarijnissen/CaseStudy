@@ -1,0 +1,17 @@
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\bin\Debug\net6.0\dal.deps.json
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\bin\Debug\net6.0\dal.runtimeconfig.json
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\bin\Debug\net6.0\dal.dll
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\bin\Debug\net6.0\dal.pdb
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\bin\Debug\net6.0\models.dll
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\bin\Debug\net6.0\models.pdb
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\obj\Debug\net6.0\dal.csproj.AssemblyReference.cache
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\obj\Debug\net6.0\dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\obj\Debug\net6.0\dal.AssemblyInfoInputs.cache
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\obj\Debug\net6.0\dal.AssemblyInfo.cs
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\obj\Debug\net6.0\dal.csproj.CoreCompileInputs.cache
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\obj\Debug\net6.0\dal.csproj.CopyComplete
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\obj\Debug\net6.0\dal.dll
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\obj\Debug\net6.0\refint\dal.dll
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\obj\Debug\net6.0\dal.pdb
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\obj\Debug\net6.0\dal.genruntimeconfig.cache
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\dal\obj\Debug\net6.0\ref\dal.dll

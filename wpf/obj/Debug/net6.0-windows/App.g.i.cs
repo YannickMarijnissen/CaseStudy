@@ -42,7 +42,7 @@ namespace wpf {
     /// <summary>
     /// App
     /// </summary>
-    public partial class App : System.Windows.Application, System.Windows.Markup.IComponentConnector {
+    public partial class App : System.Windows.Application {
         
         private bool _contentLoaded;
         
@@ -52,17 +52,17 @@ namespace wpf {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "6.0.9.0")]
         public void InitializeComponent() {
+            if (_contentLoaded) {
+                return;
+            }
+            _contentLoaded = true;
             
             #line 5 "..\..\..\App.xaml"
             this.Startup += new System.Windows.StartupEventHandler(this.Application_Startup);
             
             #line default
             #line hidden
-            if (_contentLoaded) {
-                return;
-            }
-            _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/wpf;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/wpf;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
@@ -71,14 +71,16 @@ namespace wpf {
             #line hidden
         }
         
+        /// <summary>
+        /// Application Entry Point.
+        /// </summary>
+        [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "6.0.9.0")]
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-        void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
-            this._contentLoaded = true;
+        public static void Main() {
+            wpf.App app = new wpf.App();
+            app.InitializeComponent();
+            app.Run();
         }
     }
 }

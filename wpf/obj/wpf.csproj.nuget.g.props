@@ -12,7 +12,11 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\yanni\.nuget\packages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\6.0.0\build\net6.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\6.0.0\build\net6.0\Microsoft.EntityFrameworkCore.Design.props')" />
+  </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\yanni\.nuget\packages\microsoft.entityframeworkcore.tools\6.0.0</PkgMicrosoft_EntityFrameworkCore_Tools>
     <PkgMicrosoft_Xaml_Behaviors_Wpf Condition=" '$(PkgMicrosoft_Xaml_Behaviors_Wpf)' == '' ">C:\Users\yanni\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.39</PkgMicrosoft_Xaml_Behaviors_Wpf>
     <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\yanni\.nuget\packages\materialdesignthemes\4.9.0</PkgMaterialDesignThemes>
   </PropertyGroup>

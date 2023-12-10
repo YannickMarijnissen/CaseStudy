@@ -104,7 +104,7 @@ namespace wpf.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/wpf;V1.0.0.0;component/views/taskoverviewview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/wpf;component/views/taskoverviewview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\TaskOverviewView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
