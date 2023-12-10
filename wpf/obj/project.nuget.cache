@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "0hhw4cd5SG+mECTzwsd2KoZ8Ru7tcgw5Zef4iX0ZG5oSeE7u6WE/rD9Dv6xrXGp/NdQN85ICHVYqe+CCj+7SGw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yanni\\OneDrive\\Documenten\\2023-2024\\devops\\CaseStudy\\wpf\\wpf.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yanni\\.nuget\\packages\\materialdesigncolors\\2.1.4\\materialdesigncolors.2.1.4.nupkg.sha512",
+    "C:\\Users\\yanni\\.nuget\\packages\\materialdesignthemes\\4.9.0\\materialdesignthemes.4.9.0.nupkg.sha512",
+    "C:\\Users\\yanni\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}
