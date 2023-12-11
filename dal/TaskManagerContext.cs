@@ -6,7 +6,7 @@ using Task = models.Task;
 
 namespace dal
 {
-    public class TaskManagerContect : DbContext
+    public class TaskManagerContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Task> Tasks { get; set; }
@@ -21,13 +21,11 @@ namespace dal
                 .EnableSensitiveDataLogging()
                 .LogTo(Console.WriteLine);
 
-            // Seed data
-            SeedData();
         }
 
-        private void SeedData()
+        public void SeedData()
         {
-            using (var context = new TaskManagerContect())
+            using (var context = new TaskManagerContext())
             {
                 // Ensure the database is created
                 context.Database.EnsureCreated();
@@ -43,8 +41,8 @@ namespace dal
 
                     // Seed tasks
                     context.Tasks.AddRange(
-                        new Task { Id = 1, Name = "Task 1", Description = "Description for Task 1", State = "open", CreatedAt = DateTime.Now.AddHours(-1), Deadline = DateTime.Now.AddHours(1), User = context.Users.Find(1) },
-                        new Task { Id = 2, Name = "Task 2", Description = "Description for Task 2", State = "in-Progress", CreatedAt = DateTime.Now.AddHours(-2), Deadline = DateTime.Now.AddHours(2), User = context.Users.Find(2) }
+                        new Task { Id = 1, Name = "Task 1", Description = "Description for Task 1", State = "open", CreatedAt = DateTime.Now.AddHours(-1), Deadline = DateTime.Now.AddHours(1), UserId = 1 },
+                        new Task { Id = 2, Name = "Task 2", Description = "Description for Task 2", State = "in-Progress", CreatedAt = DateTime.Now.AddHours(-2), Deadline = DateTime.Now.AddHours(2), UserId = 2 }
                     );
 
                     // Save changes to the database
@@ -54,10 +52,10 @@ namespace dal
                 }
                 else
                 {
+                    
                     Console.WriteLine("Data already exists. No need to seed.");
                 }
             }
         }
-
     }
 }

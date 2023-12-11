@@ -14,7 +14,7 @@ namespace models
         public string State { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? Deadline { get; set; }
-
+        public int UserId { get; set; }
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
     }

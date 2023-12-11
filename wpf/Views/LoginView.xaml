@@ -10,14 +10,16 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Label Content="Gebruikersnaam:" />
-        <TextBox  Grid.Row="0" Grid.Column="1" Margin="5" />
+        <Label Content="Username:"  Grid.Row="0" Margin="5"  />
+        <TextBox Text="{Binding Username, ValidatesOnDataErrors=True}" Grid.Row="1"  Margin="5" />
 
-        <Label Content="Wachtwoord:" Grid.Row="1" />
-        <PasswordBox   Grid.Row="1" Grid.Column="1" Margin="5" />
+        <Label Content="Password:"   Grid.Row="2"  Margin="5"/>
+        <TextBox Text="{Binding Password, ValidatesOnDataErrors=True}" Grid.Row="3" Margin="5" />
 
-        <Button Content="Inloggen" Command="{Binding}" CommandParameter="Login" Grid.Row="2" Grid.ColumnSpan="2" Margin="5" />
+        <Button Content="Login"  Command="{Binding}" CommandParameter="Login" Grid.Row="4"  Margin="5" />
     </Grid>
 </Window>

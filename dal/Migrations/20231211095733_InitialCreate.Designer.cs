@@ -10,8 +10,8 @@ using dal;
 
 namespace dal.Migrations
 {
-    [DbContext(typeof(TaskManagerContect))]
-    [Migration("20231210104111_InitialCreate")]
+    [DbContext(typeof(TaskManagerContext))]
+    [Migration("20231211095733_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

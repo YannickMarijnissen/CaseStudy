@@ -9,8 +9,8 @@ using dal;
 
 namespace dal.Migrations
 {
-    [DbContext(typeof(TaskManagerContect))]
-    partial class TaskManagerContectModelSnapshot : ModelSnapshot
+    [DbContext(typeof(TaskManagerContext))]
+    partial class TaskManagerContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

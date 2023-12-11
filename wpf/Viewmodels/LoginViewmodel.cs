@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+using System.Windows;
+using dal;
+using models;
 using wpf.Views;
 
 namespace wpf.Viewmodels
@@ -24,6 +23,7 @@ namespace wpf.Viewmodels
             get { return _password; }
             set { _password = value; NotifyPropertyChanged(); }
         }
+
         public override bool CanExecute(object parameter)
         {
             return true;
@@ -33,29 +33,44 @@ namespace wpf.Viewmodels
         {
             switch (parameter.ToString())
             {
-
                 case "Login": Login(); break;
             }
         }
+
         private void Login()
         {
-            var vm = new TaskOverviewViewmodel();
-            var view = new TaskOverviewView();
-            view.DataContext = vm;
-            view.Show();
+            using (var context = new TaskManagerContext())
+            {
+                // Check if there is a user with the entered username and password
+                var user = context.Users.SingleOrDefault(u => u.Username == Username && u.Password == Password);
+
+                if (user != null)
+                {
+                    // Authentication successful
+                    var vm = new TaskOverviewViewmodel();
+                    var view = new TaskOverviewView();
+                    view.DataContext = vm;
+                    view.Show();
+                }
+                else
+                {
+                    // Authentication failed
+                    MessageBox.Show("Invalid username or password. Please try again.", "Authentication Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
+
         public LoginViewmodel()
         {
 
         }
+
         public override string this[string columnName]
         {
             get
             {
-            
                 return "";
             }
         }
-     
     }
 }

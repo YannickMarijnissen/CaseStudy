@@ -9,12 +9,12 @@ wpf
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-
-7-428294954
+C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\App.xaml
+62073688818
 
 17168067955
 217-1796859368
-App.xaml;Views\CalendarView.xaml;Views\EditTaskView.xaml;Views\LoginView.xaml;Views\NewTaskView.xaml;Views\TaskDetailsView.xaml;Views\TaskOverviewView.xaml;
+Views\CalendarView.xaml;Views\EditTaskView.xaml;Views\LoginView.xaml;Views\NewTaskView.xaml;Views\TaskDetailsView.xaml;Views\TaskOverviewView.xaml;
 
 True
 

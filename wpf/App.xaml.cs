@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dal;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -17,6 +18,14 @@ namespace wpf
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+            using (var context = new TaskManagerContext())
+            {
+                // Ensure the database is created
+                context.Database.EnsureCreated();
+
+                // Perform data seeding
+                context.SeedData();
+            }
             var vm = new LoginViewmodel();
             var view = new LoginView();
             view.DataContext = vm;
