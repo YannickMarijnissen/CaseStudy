@@ -23,7 +23,13 @@ namespace wpf.Viewmodels
             get { return _password; }
             set { _password = value; NotifyPropertyChanged(); }
         }
+        private int _userId;
 
+        public int UserId
+        {
+            get { return _userId; }
+            set { _userId = value; NotifyPropertyChanged(); }
+        }
         public override bool CanExecute(object parameter)
         {
             return true;
@@ -46,8 +52,9 @@ namespace wpf.Viewmodels
 
                 if (user != null)
                 {
-                    // Authentication successful
-                    var vm = new TaskOverviewViewmodel();
+                    UserId = user.Id;
+                  
+                    var vm = new TaskOverviewViewmodel(UserId); // Pass the UserId
                     var view = new TaskOverviewView();
                     view.DataContext = vm;
                     view.Show();
@@ -59,6 +66,7 @@ namespace wpf.Viewmodels
                 }
             }
         }
+
 
         public LoginViewmodel()
         {

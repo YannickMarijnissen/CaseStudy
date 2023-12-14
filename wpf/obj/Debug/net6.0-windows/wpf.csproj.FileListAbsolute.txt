@@ -1,6 +1,5 @@
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\wpf.csproj.AssemblyReference.cache
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\Views\LoginView.baml
-C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\Views\CalendarView.g.cs
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\Views\EditTaskView.g.cs
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\Views\LoginView.g.cs
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\Views\NewTaskView.g.cs
@@ -18,7 +17,6 @@ C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\bin\Debug\net6
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\Views\TaskOverviewView.g.cs
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\App.baml
-C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\Views\CalendarView.baml
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\Views\EditTaskView.baml
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\Views\NewTaskView.baml
 C:\Users\yanni\OneDrive\Documenten\2023-2024\devops\CaseStudy\wpf\obj\Debug\net6.0-windows\Views\TaskDetailsView.baml

@@ -27,7 +27,7 @@
         <TextBlock Text="Task Details" FontWeight="Bold" FontSize="18" Margin="0,0,0,10" />
 
         <TextBlock Text="Title:" Grid.Row="1" Grid.Column="0" Margin="0,5,5,0" VerticalAlignment="Center" />
-        <TextBlock Text="{Binding Task.Name}" Grid.Row="1" Grid.Column="1" Margin="0,5,5,0" VerticalAlignment="Center" />
+        <TextBlock Text="{Binding Task.Name, ValidatesOnDataErrors=true}" Grid.Row="1" Grid.Column="1" Margin="0,5,5,0" VerticalAlignment="Center" />
 
         <TextBlock Text="Description:" Grid.Row="2" Grid.Column="0" Margin="0,5,5,0" VerticalAlignment="Center" />
         <TextBlock Text="{Binding Task.Description}" Grid.Row="2" Grid.Column="1" Margin="0,5,5,0" VerticalAlignment="Center" />

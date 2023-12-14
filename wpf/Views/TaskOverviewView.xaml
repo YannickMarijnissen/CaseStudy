@@ -43,10 +43,7 @@
                 Command="{Binding}" Content="detail" CommandParameter="OpenDetailTaskWindow">
 
         </Button>
-        <Button x:Name="btCalenderTask"  Grid.Row="0" Grid.Column="4" Margin="5"
-                Command="{Binding}" Content="Calendar" CommandParameter="OpenCalendarWindow">
-
-        </Button>
+      
 
         <DataGrid Grid.Row="1" Grid.ColumnSpan="6"
                   IsReadOnly="True" ItemsSource="{Binding Tasks}"

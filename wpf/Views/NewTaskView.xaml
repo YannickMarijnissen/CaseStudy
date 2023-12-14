@@ -56,11 +56,11 @@
        VerticalAlignment="Center"
        FontSize="14" />
 
-        <TextBox Text="{Binding Task.Deadline, ValidatesOnDataErrors=True}"
-         Grid.Row="2" Grid.Column="1"
-         Margin="5"
-         VerticalContentAlignment="Center"
-         FontSize="14" />
+        <DatePicker SelectedDate="{Binding Deadline, ValidatesOnDataErrors=True}"
+                    Grid.Row="2" Grid.Column="1"
+                    Margin="5"
+                    VerticalContentAlignment="Center"
+                    FontSize="14" />
         <Button x:Name="btnAddTask" Content="Task toevoegen" Grid.Column="0" Grid.Row="3" Margin="5"
                 Command="{Binding}" CommandParameter="TaskToevoegen" />
 
