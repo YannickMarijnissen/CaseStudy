@@ -22,6 +22,7 @@ namespace wpf.Views
         public TaskOverviewView()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
         }
 
     }

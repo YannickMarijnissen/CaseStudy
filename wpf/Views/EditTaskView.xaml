@@ -14,6 +14,7 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}">
+
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -35,40 +36,35 @@
                VerticalAlignment="Center"
                FontSize="14" />
 
-        <TextBox Text="{Binding Task.Name,ValidatesOnDataErrors=True}"
+        <TextBox Text="{Binding Task.Name, ValidatesOnDataErrors=True}"
                  Grid.Row="0" Grid.Column="1"
                  Margin="5"
                  VerticalContentAlignment="Center"
                  FontSize="14" />
+
         <Label Content="Description"
                Grid.Row="1" Grid.Column="0"
                Margin="5"
                VerticalAlignment="Center"
                FontSize="14" />
 
-        <TextBox Text="{Binding Task.Description,ValidatesOnDataErrors=True}"
+        <TextBox Text="{Binding Task.Description, ValidatesOnDataErrors=True}"
                  Grid.Row="1" Grid.Column="1"
                  Margin="5"
                  VerticalContentAlignment="Center"
                  FontSize="14" />
+
         <Label Content="State"
                Grid.Row="2" Grid.Column="0"
                Margin="5"
                VerticalAlignment="Center"
                FontSize="14" />
 
-        <ComboBox SelectedItem="{Binding SelectedState, UpdateSourceTrigger=PropertyChanged}"
-          Grid.Row="2" Grid.Column="1" Margin="5"
-          VerticalContentAlignment="Center" FontSize="14">
-            <ComboBoxItem Content="Open" />
-            <ComboBoxItem Content="In-Progress" />
-            <ComboBoxItem Content="Postponed" />
-            <ComboBoxItem Content="Finished" />
+        <ComboBox SelectedItem="{Binding Task.State, UpdateSourceTrigger=PropertyChanged}"
+                  ItemsSource="{Binding ComboBoxItems}"
+                  Grid.Row="2" Grid.Column="1" Margin="5"
+                  VerticalContentAlignment="Center" FontSize="14">
         </ComboBox>
-
-
-
-
 
         <Label Content="Deadline"
        Grid.Row="3" Grid.Column="0"
@@ -76,17 +72,13 @@
        VerticalAlignment="Center"
        FontSize="14" />
 
-        <TextBox Text="{Binding Task.Deadline, ValidatesOnDataErrors=True}"
-         Grid.Row="3" Grid.Column="1"
-         Margin="5"
-         VerticalContentAlignment="Center"
-         FontSize="14" />
+        <DatePicker SelectedDate="{Binding Task.Deadline, ValidatesOnDataErrors=True}"
+            Grid.Row="3" Grid.Column="1"
+            Margin="5"
+            VerticalContentAlignment="Center"
+            FontSize="14" />
 
-        <Button  Content="Task aanpassen"    Grid.Row="4" Grid.Column="0" Margin="5"
+        <Button Content="Task aanpassen" Grid.Row="4" Grid.Column="0" Margin="5"
                 Command="{Binding}" CommandParameter="TaskAanpassen" />
-
-
-
     </Grid>
-
 </Window>

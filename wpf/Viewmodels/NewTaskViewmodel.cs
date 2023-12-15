@@ -48,7 +48,7 @@ namespace wpf.Viewmodels
             get { return _deadline; }
             set { _deadline = value; NotifyPropertyChanged(); }
         }
-
+        public Action OnTaskCreatedCallback { get; set; }
         public NewTaskViewmodel(int userId)
         {
             UserId = userId;
@@ -70,6 +70,7 @@ namespace wpf.Viewmodels
                         if (string.IsNullOrEmpty(Name))
                             return "Name is required.";
                         break;
+
                     case nameof(Description):
                         if (string.IsNullOrEmpty(Description))
                             return "Description is required.";
@@ -121,9 +122,9 @@ namespace wpf.Viewmodels
             Name = string.Empty;
             Description = string.Empty;
             Deadline = DateTime.Now;
-
+            OnTaskCreatedCallback?.Invoke();
             CloseWindow();
-            ReloadTasks();
+           
 
             MessageBox.Show("Task created successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
         }
@@ -140,10 +141,7 @@ namespace wpf.Viewmodels
             }
         }
 
-        private void ReloadTasks()
-        {
-           
-        }
+        
 
 
 

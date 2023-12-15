@@ -43,7 +43,10 @@
                 Command="{Binding}" Content="detail" CommandParameter="OpenDetailTaskWindow">
 
         </Button>
+       
+
       
+
 
         <DataGrid Grid.Row="1" Grid.ColumnSpan="6"
                   IsReadOnly="True" ItemsSource="{Binding Tasks}"

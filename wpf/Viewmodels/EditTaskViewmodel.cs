@@ -2,6 +2,7 @@
 using models;
 using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 
 namespace wpf.Viewmodels
@@ -10,7 +11,6 @@ namespace wpf.Viewmodels
     {
         private Task _task;
 
-        // Replace YourComboBoxItems with your actual collection of ComboBox items
         private ObservableCollection<string> _comboBoxItems = new ObservableCollection<string>
         {
             "Open",
@@ -28,7 +28,13 @@ namespace wpf.Viewmodels
                 NotifyPropertyChanged();
             }
         }
+        private DateTime _deadline;
 
+        public DateTime Deadline
+        {
+            get { return _deadline; }
+            set { _deadline = value; NotifyPropertyChanged(); }
+        }
         public Task Task
         {
             get { return _task; }
@@ -46,8 +52,14 @@ namespace wpf.Viewmodels
                     }
                     else
                     {
-                        // Handle the case when the selectedState is not in ComboBox items
-                        Console.WriteLine($"Invalid selected state: {selectedState}");
+                        // If the selectedState is not in ComboBox items, add it
+                        ComboBoxItems.Add(selectedState);
+
+                        // Optionally, sort the ComboBox items
+                        ComboBoxItems = new ObservableCollection<string>(ComboBoxItems.OrderBy(item => item));
+
+                        // Notify that ComboBoxItems has changed
+                        NotifyPropertyChanged(nameof(ComboBoxItems));
                     }
                 }
 
@@ -58,7 +70,7 @@ namespace wpf.Viewmodels
         public EditTaskViewmodel(Task selectedTask)
         {
             Task = selectedTask;
-
+            Deadline = new DateTime(Deadline.Year, Deadline.Month, Deadline.Day, 0, 0, 0, DateTimeKind.Local);
             // Debugging line to check the updated value of Task.State
             Console.WriteLine($"Task.State after adjustment: {Task.State}");
         }

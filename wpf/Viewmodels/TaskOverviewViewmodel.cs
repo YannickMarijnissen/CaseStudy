@@ -76,12 +76,18 @@ namespace wpf.Viewmodels
         }
         private void OpenNewTaskWindow()
         {
-            var vm = new NewTaskViewmodel(UserId);
+            var vm = new NewTaskViewmodel(UserId)
+            {
+                OnTaskCreatedCallback = ReloadTasks
+            };
             var view = new NewTaskView();
             view.DataContext = vm;
             view.Show();
         }
-     
+        private void ReloadTasks()
+        {
+            LoadTasks();
+        }
         private void OpenEditTaskWindow()
         {
             var vm = new EditTaskViewmodel(GeselecteerdeTask);
@@ -89,6 +95,7 @@ namespace wpf.Viewmodels
             view.DataContext = vm;
             view.Show();
         }
+        
         private void DeleteTask()
         {
             if (GeselecteerdeTask != null)

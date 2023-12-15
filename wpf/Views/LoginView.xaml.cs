@@ -22,6 +22,7 @@ namespace wpf.Views
         public LoginView()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
         }
     }
 }
